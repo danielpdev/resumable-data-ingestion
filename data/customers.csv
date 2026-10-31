@@ -1,0 +1,5 @@
+id,name,email
+1,Alex Demo,alex@example.test
+2,Sam Demo,sam@example.test
+3,Invalid,not-an-email
+1,Alex Demo,alex@example.test

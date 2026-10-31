@@ -1,0 +1,61 @@
+{
+  "mode": "fixture",
+  "python": "3.12.13",
+  "recorded_at": "2026-10-31T13:52:24.632861+00:00",
+  "elapsed_seconds": 0.0229,
+  "result": {
+    "checkpoint": {
+      "batch": "13e58de75bfc3541a45f6a52d666eb7b1b96734651aa5e6aae16caee34e942bc",
+      "cursor": 2,
+      "total": 4,
+      "done": false,
+      "customers": 2,
+      "quarantined": 0
+    },
+    "resumed": {
+      "batch": "13e58de75bfc3541a45f6a52d666eb7b1b96734651aa5e6aae16caee34e942bc",
+      "cursor": 4,
+      "total": 4,
+      "done": true,
+      "customers": 2,
+      "quarantined": 1
+    },
+    "corrected": {
+      "batch": "092494bb7ba38df6f0d3ca3dcc2497eed4d3c03eb0740c855fcb451bab0ec08d",
+      "cursor": 1,
+      "total": 1,
+      "done": true,
+      "customers": 3,
+      "quarantined": 0
+    },
+    "customers": [
+      {
+        "id": "1",
+        "name": "Alex Demo",
+        "email": "alex@example.test"
+      },
+      {
+        "id": "2",
+        "name": "Sam Demo",
+        "email": "sam@example.test"
+      },
+      {
+        "id": "3",
+        "name": "Invalid corrected",
+        "email": "fixed@example.test"
+      }
+    ],
+    "quarantine": [
+      {
+        "batch": "13e58de75bfc3541a45f6a52d666eb7b1b96734651aa5e6aae16caee34e942bc",
+        "row": 3,
+        "raw": {
+          "id": "3",
+          "name": "Invalid",
+          "email": "not-an-email"
+        },
+        "reason": "1 validation error for CustomerInput\nemail\n  String should match pattern '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' [type=string_pattern_mismatch, input_value='not-an-email', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_pattern_mismatch"
+      }
+    ]
+  }
+}
