@@ -6,6 +6,12 @@ Checkpointed CSV/JSON import with quarantine and deduplication.
 
 **Role focus:** Data Engineer / Python Backend. **Status:** working local portfolio implementation, with synthetic data.
 
+## Demo
+
+![How Resumable Data Ingestion works](docs/demo.gif)
+
+Edited replay of captured CLI outputs in deterministic fixture mode. This is not live model inference. [Full recording](docs/demo.mp4). Rebuild with `./scripts/render_gif.sh` (FFmpeg required).
+
 ## The engineering decision
 
 A batch ID hashes the immutable source content. Each row effect, validation failure and cursor update commit together. Bad rows enter quarantine; corrected input is a new batch and upserts the same business ID.
